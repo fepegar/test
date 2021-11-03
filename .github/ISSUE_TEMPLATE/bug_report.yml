@@ -78,9 +78,9 @@ body:
         echo $HEY "lkj"
         ```
 
-  - type: textarea
-    id: logssd
-    attributes:
-      description: Test for textare without label
-      placeholder: Paste the full error traceback, not just the last error
-      render: shell
+  # - type: textarea
+  #   id: logssd
+  #   attributes:
+  #     description: Test for textare without label
+  #     placeholder: Paste the full error traceback, not just the last error
+  #     render: shell
