@@ -70,9 +70,17 @@ body:
 
   - type: markdown
     attributes:
+      label: Do this and that
       value: |
         Please run the line below in your shell
 
         ```shell
         echo $HEY "lkj"
         ```
+
+  - type: textarea
+    id: logssd
+    attributes:
+      description: Test for textare without label
+      placeholder: Paste the full error traceback, not just the last error
+      render: shell
