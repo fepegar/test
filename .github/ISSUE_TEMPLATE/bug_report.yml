@@ -26,8 +26,6 @@ body:
     attributes:
       label: Bug summary
       description: Please provide 1-2 short sentences that succinctly describes the bug
-      # placeholder: Tell us what you see!
-      # value: "A bug happened!"
     validations:
       required: true
 
@@ -35,7 +33,6 @@ body:
     id: reproduction
     attributes:
       label: Code for reproduction
-      description: "If possible, please provide a minimum self-contained example: Please provide a minimal working example, if possible: https://stackoverflow.com/help/minimal-reproducible-example"
       placeholder: Paste your code here
       render: python
     validations:
