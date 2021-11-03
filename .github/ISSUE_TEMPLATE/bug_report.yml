@@ -60,7 +60,7 @@ body:
       placeholder: Paste the full error traceback, not just the last error
       render: shell
 
-    - type: textarea
+  - type: textarea
     id: logss
     attributes:
       label: Error messages
