@@ -68,11 +68,11 @@ body:
       placeholder: Paste the full error traceback, not just the last error
       render: shell
 
-  # - type: markdown
-  #   attributes:
-  #     value: |
-  #       Please run the line below in your shell
+  - type: markdown
+    attributes:
+      value: |
+        Please run the line below in your shell
 
-  #       ```shell
-  #       echo $HEY "lkj"
-  #       ```
+        ```shell
+        echo $HEY "lkj"
+        ```
