@@ -56,23 +56,23 @@ body:
     id: logsz
     attributes:
       label: Error messages
-      description: Test for `code`
+      description: Test for code
       placeholder: Paste the full error traceback, not just the last error
       render: shell
 
-  - type: textarea
-    id: logss
-    attributes:
-      label: Error messages
-      description: Test for `code`
-      placeholder: Paste the full error traceback, not just the last error
-      render: shell
-
-  # - type: markdown
+  # - type: textarea
+  #   id: logss
   #   attributes:
-  #     value: |
-  #       Please run the line below in your shell
+  #     label: Error messages
+  #     description: Test for `code`
+  #     placeholder: Paste the full error traceback, not just the last error
+  #     render: shell
 
-  #       ```shell
-  #       echo $HEY "lkj"
-  #       ```
+  # # - type: markdown
+  # #   attributes:
+  # #     value: |
+  # #       Please run the line below in your shell
+
+  # #       ```shell
+  # #       echo $HEY "lkj"
+  # #       ```
