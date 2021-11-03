@@ -1,4 +1,4 @@
-name: Bug Report
+name: "\U0001F41B Bug Report"
 description: If you are pretty sure you are getting a bug, please create a report to help us improve TorchIO
 labels: ["bug"]
 
@@ -15,7 +15,7 @@ body:
     id: summary
     attributes:
       label: Bug summary
-      description: Please provide 1-2 short sentences that succinctly describe the bug
+      description: Please provide 1-2 short sentences that succinctly describe the bug.
     validations:
       required: true
 
@@ -23,7 +23,7 @@ body:
     id: reproduction
     attributes:
       label: Code for reproduction
-      description: "If possible, please provide a minimum self-contained example: https://stackoverflow.com/help/minimal-reproducible-example. This will be automatically formatted into code, so no need for backticks"
+      description: "If possible, please provide a *minimum self-contained* example: https://stackoverflow.com/help/minimal-reproducible-example. This will be automatically formatted into code, so no need for backticks".
       placeholder: Paste your code here
       render: python
 
@@ -40,7 +40,7 @@ body:
     id: logs
     attributes:
       label: Error messages
-      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks
+      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
       placeholder: Paste the full error traceback, not just the last error
       render: python-traceback
 
@@ -48,7 +48,7 @@ body:
     id: expected
     attributes:
       label: Expected outcome
-      description: Please provide a description (or visual example) of the expected outcome from the code snippet. If this used to work in an earlier version of Matplotlib, please note the version it used to work on
+      description: Please provide a description (or visual example) of the expected outcome from the code snippet.
     validations:
       required: true
 
@@ -56,6 +56,6 @@ body:
     id: system
     attributes:
       label: System info
-      description: Please run `python <(curl -s https://raw.githubusercontent.com/fepegar/torchio/main/print_system.py)` in your console
+      description: Please run `python <(curl -s https://raw.githubusercontent.com/fepegar/torchio/main/print_system.py)` in your console.
       placeholder: Paste the output of the command here
       render: shell
