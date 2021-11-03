@@ -23,7 +23,7 @@ body:
     id: reproduction
     attributes:
       label: Code for reproduction
-      description: "If possible, please provide a minimum self-contained example: https://stackoverflow.com/help/minimal-reproducible-example". . This will be automatically formatted into code, so no need for backticks
+      description: "If possible, please provide a minimum self-contained example: https://stackoverflow.com/help/minimal-reproducible-example. This will be automatically formatted into code, so no need for backticks"
       placeholder: Paste your code here
       render: python
 
@@ -60,19 +60,19 @@ body:
       placeholder: Paste the full error traceback, not just the last error
       render: shell
 
-  # - type: textarea
-  #   id: logss
+  - type: textarea
+    id: logss
+    attributes:
+      label: Error messages
+      description: Test for `code`
+      placeholder: Paste the full error traceback, not just the last error
+      render: shell
+
+  # - type: markdown
   #   attributes:
-  #     label: Error messages
-  #     description: Test for `code`
-  #     placeholder: Paste the full error traceback, not just the last error
-  #     render: shell
+  #     value: |
+  #       Please run the line below in your shell
 
-  # # - type: markdown
-  # #   attributes:
-  # #     value: |
-  # #       Please run the line below in your shell
-
-  # #       ```shell
-  # #       echo $HEY "lkj"
-  # #       ```
+  #       ```shell
+  #       echo $HEY "lkj"
+  #       ```
