@@ -1,4 +1,4 @@
-name: Bug Report
+name: Bug Report for tio
 description: If you are pretty sure you are getting a bug, please create a report to help us improve TorchIO
 title: ""
 labels: ["bug"]
