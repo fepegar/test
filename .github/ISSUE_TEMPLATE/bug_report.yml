@@ -23,11 +23,9 @@ body:
     id: reproduction
     attributes:
       label: Code for reproduction
-      description: "If possible, please provide a minimum self-contained example: https://stackoverflow.com/help/minimal-reproducible-example"
+      description: "If possible, please provide a minimum self-contained example: https://stackoverflow.com/help/minimal-reproducible-example". . This will be automatically formatted into code, so no need for backticks
       placeholder: Paste your code here
       render: python
-    validations:
-      required: true
 
   - type: textarea
     id: actual
@@ -39,6 +37,14 @@ body:
       required: true
 
   - type: textarea
+    id: logs
+    attributes:
+      label: Error messages
+      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks
+      placeholder: Paste the full error traceback, not just the last error
+      render: python-traceback
+
+  - type: textarea
     id: expected
     attributes:
       label: Expected outcome
@@ -46,29 +52,27 @@ body:
     validations:
       required: true
 
-  - type: dropdown
-    id: browsers
-    attributes:
-      label: What browsers are you seeing the problem on?
-      multiple: true
-      options:
-        - Firefox
-        - Chrome
-        - Safari
-        - Microsoft Edge
-
   - type: textarea
-    id: logs
+    id: logsz
     attributes:
-      label: Relevant log output
-      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
+      label: Error messages
+      description: Test for `code`
+      placeholder: Paste the full error traceback, not just the last error
       render: shell
 
-  - type: checkboxes
-    id: terms
+    - type: textarea
+    id: logss
     attributes:
-      label: Code of Conduct
-      description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.com)
-      options:
-        - label: I agree to follow this project's Code of Conduct
-          required: true
+      label: Error messages
+      description: Test for `code`
+      placeholder: Paste the full error traceback, not just the last error
+      render: shell
+
+  - type: markdown
+    attributes:
+      value: |
+        Please run the line below in your shell
+
+        ```shell
+        echo $HEY "lkj"
+        ```
