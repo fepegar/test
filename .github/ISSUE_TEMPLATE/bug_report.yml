@@ -57,6 +57,11 @@ body:
     id: system
     attributes:
       label: System info
-      description: Please run `python <(curl -s https://raw.githubusercontent.com/fepegar/torchio/main/print_system.py)` in your console.
+      description: |
+        Please run this command in your console:
+
+        ```python
+        python <(curl -s https://raw.githubusercontent.com/fepegar/torchio/main/print_system.py)`
+        ```
       placeholder: Paste the output of the command here
       render: shell
