@@ -23,15 +23,15 @@ body:
     id: reproduction
     attributes:
       label: Code for reproduction
-      description: "If possible, please provide a *minimum* **self-contained** example: https://stackoverflow.com/help/minimal-reproducible-example."
-      placeholder: Paste your code here. It will be automatically formatted
+      description: "If possible, please provide a *minimum* **self-contained** example: https://stackoverflow.com/help/minimal-reproducible-example. It will be automatically formatted"
+      placeholder: Your code here
       render: python
 
   - type: textarea
     id: actual
     attributes:
       label: Actual outcome
-      description: Please provide the output produced by the above code, which may be a screenshot, console output, etc.
+      description: Please describe the outcome of running the above code.
     validations:
       required: true
 
@@ -39,8 +39,8 @@ body:
     id: logs
     attributes:
       label: Error messages
-      description: Please copy and paste any relevant log output.
-      placeholder: Paste the full error traceback, not just the last error. It will be automatically formatted
+      description: Please copy and paste any relevant log output. Paste the full error traceback, not just the last error. It will be automatically formatted.
+      placeholder: Your errors here
       render: python-traceback
 
   - type: textarea
