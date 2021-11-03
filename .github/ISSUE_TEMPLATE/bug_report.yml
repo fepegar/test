@@ -1,4 +1,4 @@
-name: "\U0001F41B Bug Report"
+name: "Bug Report"
 description: If you are pretty sure you are getting a bug, please create a report to help us improve TorchIO
 labels: ["bug"]
 
@@ -23,7 +23,7 @@ body:
     id: reproduction
     attributes:
       label: Code for reproduction
-      description: "If possible, please provide a *minimum self-contained* example: https://stackoverflow.com/help/minimal-reproducible-example. This will be automatically formatted into code, so no need for backticks".
+      description: "If possible, please provide a minimum self-contained example: https://stackoverflow.com/help/minimal-reproducible-example. This will be automatically formatted into code, so no need for backticks"
       placeholder: Paste your code here
       render: python
 
