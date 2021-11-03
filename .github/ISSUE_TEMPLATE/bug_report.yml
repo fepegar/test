@@ -58,10 +58,10 @@ body:
     attributes:
       label: System info
       description: |
-        Please run this command in your console:
+        Please run this command in your console and paste the output below
 
-        ```python
+        ```shell
         python <(curl -s https://raw.githubusercontent.com/fepegar/torchio/main/print_system.py)`
         ```
-      placeholder: Paste the output of the command here
+      placeholder: Your system info
       render: shell
