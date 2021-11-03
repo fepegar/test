@@ -53,34 +53,9 @@ body:
       required: true
 
   - type: textarea
-    id: logsz
+    id: system
     attributes:
-      label: Error messages
-      description: Test for code
-      placeholder: Paste the full error traceback, not just the last error
+      label: System info
+      description: Please run `python <(curl -s https://raw.githubusercontent.com/fepegar/torchio/main/print_system.py)` in your console
+      placeholder: Paste the output of the command here
       render: shell
-
-  - type: textarea
-    id: logss
-    attributes:
-      label: Error messages
-      description: Test for `code`
-      placeholder: Paste the full error traceback, not just the last error
-      render: shell
-
-  - type: markdown
-    attributes:
-      # label: Do this and that
-      value: |
-        Please run the line below in your shell
-
-        ```shell
-        echo $HEY "lkj"
-        ```
-
-  # - type: textarea
-  #   id: logssd
-  #   attributes:
-  #     description: Test for textare without label
-  #     placeholder: Paste the full error traceback, not just the last error
-  #     render: shell
