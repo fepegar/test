@@ -9,4 +9,4 @@ jobs:
 
     steps:
       - name: Compile LaTeX document
-        run: Invoke-Expression $COMMAND
+        run: Invoke-Expression $env:COMMAND
