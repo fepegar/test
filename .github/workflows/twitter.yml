@@ -28,6 +28,8 @@ jobs:
           OUTPUT=$(python <<EOF
           import os
           import tweepy
+          print(os.environ['TWITTER_CONSUMER_API_KEY'])
+          print(os.environ['TWITTER_ACCESS_TOKEN'])
           auth = tweepy.OAuthHandler(
             os.environ['TWITTER_CONSUMER_API_KEY'],
             os.environ['TWITTER_CONSUMER_API_SECRET'],
