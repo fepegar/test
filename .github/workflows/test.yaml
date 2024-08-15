@@ -1,0 +1,44 @@
+name: Test workflow
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  setup:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v4
+
+  smoke-test-gen:
+    runs-on: ubuntu-20.04
+    needs: setup
+    steps:
+      - uses: actions/checkout@v4
+
+  smoke-test-eval:
+    runs-on: ubuntu-20.04
+    needs: setup
+    steps:
+      - uses: actions/checkout@v4
+
+  smoke-tests-completed:
+    if: always()
+
+    needs:
+      - smoke-test-gen
+      - smoke-test-eval
+
+    runs-on: ubuntu-20.04
+
+    steps:
+    - name: Decide whether the needed jobs succeeded or failed
+      uses: re-actors/alls-green@release/v1
+      with:
+        allowed-skips: smoke-test-gen, smoke-test-eval
+        jobs: ${{ toJSON(needs) }}
