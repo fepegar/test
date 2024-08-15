@@ -42,6 +42,7 @@ jobs:
     if: needs.changes.outputs.changes_eval == 'true'
     steps:
       - run: echo "Eval changes detected!"
+      - run: exit 1
 
   smoke-tests-completed:
     if: always()
