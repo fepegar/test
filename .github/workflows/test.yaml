@@ -10,38 +10,38 @@ permissions:
   contents: read
 
 jobs:
-  setup:
+  changes:
     runs-on: ubuntu-20.04
+
+    # Set job outputs to values from filter step
+    outputs:
+      no_changes_eval: ${{ steps.filter.outputs.no_changes_eval }}
+      changes_eval: ${{ steps.filter.outputs.changes_eval }}
+
     steps:
-      - uses: actions/checkout@v4
+    # For pull requests it's not necessary to checkout the code
+    - uses: dorny/paths-filter@v3
+      id: filter
+      with:
+        filters: |
+          no_changes_eval:
+            - '!eval/**'
+          changes_eval:
+            - 'eval/**'
 
   smoke-test-gen:
     runs-on: ubuntu-20.04
-    needs: setup
+    needs: changes
+    if: needs.changes.outputs.no_changes_eval == 'true'
     steps:
-      - uses: dorny/paths-filter@v3
-        id: changes
-        with:
-          filters: |
-            not_eval_related:
-              - '!eval/**'
-
-      - if: steps.changes.outputs.not_eval_related == 'true'
-        run: echo "Run smoke tests for not_eval_related changes"
+      - run: echo "No eval changes detected!"
 
   smoke-test-eval:
     runs-on: ubuntu-20.04
-    needs: setup
+    needs: changes
+    if: needs.changes.outputs.changes_eval == 'true'
     steps:
-      - uses: dorny/paths-filter@v3
-        id: changes
-        with:
-          filters: |
-            eval_related:
-              - 'eval/**'
-
-      - if: steps.changes.outputs.eval_related == 'true'
-        run: echo "Run smoke tests for eval_related changes"
+      - run: echo "Eval changes detected!"
 
   smoke-tests-completed:
     if: always()
