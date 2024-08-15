@@ -19,13 +19,29 @@ jobs:
     runs-on: ubuntu-20.04
     needs: setup
     steps:
-      - uses: actions/checkout@v4
+      - uses: dorny/paths-filter@v3
+        id: changes
+        with:
+          filters: |
+            not_eval_related:
+              - '!eval/**'
+
+      - if: steps.changes.outputs.not_eval_related == 'true'
+        run: echo "Run smoke tests for not_eval_related changes"
 
   smoke-test-eval:
     runs-on: ubuntu-20.04
     needs: setup
     steps:
-      - uses: actions/checkout@v4
+      - uses: dorny/paths-filter@v3
+        id: changes
+        with:
+          filters: |
+            eval_related:
+              - 'eval/**'
+
+      - if: steps.changes.outputs.eval_related == 'true'
+        run: echo "Run smoke tests for eval_related changes"
 
   smoke-tests-completed:
     if: always()
