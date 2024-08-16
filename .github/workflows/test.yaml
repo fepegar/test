@@ -1,9 +1,6 @@
 name: Test workflow
 
 on:
-  push:
-    branches:
-      - main
   pull_request:
 
 permissions:
